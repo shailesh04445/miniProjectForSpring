@@ -1,7 +1,7 @@
 package com.shailesh.logbook.security;
 
 import com.shailesh.logbook.entity.User;
-import com.shailesh.logbook.repository.userRepository;
+import com.shailesh.logbook.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomUserDetailsService  implements UserDetailsService {
 
-    private final userRepository userRepository;
+    private final UserRepository userRepository;
 
     //constructor injection
-    public CustomUserDetailsService(userRepository userRepository) {
+    public CustomUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
